@@ -1,3 +1,23 @@
 .navbar-nav a {
-    font-weight: bold;
+    font-weight: 500;
+    color: #2980b9 !important;
+    text-transform: uppercase;
+}
+
+.register-btn {
+    background-color: #3F90FC;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.admin-btn {
+    background-color: #434141;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
 }
