@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "Clean Up Local Park",
+      "img": "https://i.ibb.co/sFdJvjV/clearn-Park.png",
+      "date": "",
+      "description": "You can do as much or as little as you like, but keep in mind that more involved projects (such as painting colorful murals or planting trees -- both on our list) might require special permission. Decide what projects appeal to your skill set, and then check with your local park's board to get approval. "
+    },
+    {
+      "id": 2,
+      "title": "Build Houses For Birds",
+      "img": "https://i.ibb.co/8PBtzFS/bird-House.png",
+      "date": "",
+      "description": "We have an uncanny ability to make birds do what we want them to do. In Blood Simple there's a shot from the bumper of a car and it's going up this road and a huge flock of birds takes off at the perfect moment"
+    },
+    {
+      "id": 3,
+      "title": "Child Support",
+      "img": "https://i.ibb.co/qCH5DZD/child-Support.png",
+      "date": "",
+      "description": "Obviously, children need food, proper clothing, and a safe and comfortable place to live. At a minimum, child support may be used to purchase groceries, snacks, beverages, and other food items. It may also be used to purchase shoes, jackets, and appropriate clothing."
+    },
+    {
+      "id": 4,
+      "title": "Refuge Shelter",
+      "img": "https://i.ibb.co/Rhzj5jH/refuse-Shelter.png",
+      "date": "",
+      "description": "Make Houses For the Refugees As they dont have any Place to Sleep and Stay and Try to arrange some foods and some other basic Need of them"
+    },
+    {
+      "id": 5,
+      "title": "River Clean",
+      "img": "https://i.ibb.co/XtjMYPT/river-Clean.png",
+      "date": "",
+      "description": "Rivers are important part of human lives. But unfortunately, only few are aware of its importance. The proof: tons of trash in our rivers and creeks, making it look and smell like a dumpsite."
+    },
+    {
+      "id": 6,
+      "title": "Cloth Swap",
+      "img": "https://i.ibb.co/7nyFjHX/cloth-Swap.png",
+      "date": "",
+      "description": ". As luxurious clothing, accessories are swapped; it reduces the load on the environment by extending the lifetime of the products. Clothing swap helps people to understand the difference between end-of-use and end-of-life items and tries to get maximum utilization of end-of-use items. This chapter discusses about the origin of clothing swap and how it contributes to eco-friendly fashion and for the growth of sharing economy. "
+    },
+    {
+      "id": 7,
+      "title": "Clean Water",
+      "img": "https://i.ibb.co/TBxrSYJ/clean-Water.png",
+      "date": "",
+      "description": "Clean water is important for people's daily lives because it lets them drink water, keep good hygiene and plant crops, and if you clean drink or plant with unsanitized water it could lead to diseases which could be harmful."
+    }
+  ]
