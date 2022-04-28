@@ -21,12 +21,12 @@ const LogIn = () => {
         </div>
       </div>
       <div
-        className="d-flex justify-content-center align-items-center py-5"
+        className="d-flex justify-content-center align-items-center py-5 pt-2"
         style={{ minHeight: "400px" }}
       >
         <div className="card-section card w-50 mt-5 d-flex justify-content-center align-items-center">
           <div className="card-body ">
-            <h3>Login With</h3> <br />
+            <h3>Welcome Back</h3> <br />
           </div>
           <Form className="mb-4">
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -38,11 +38,15 @@ const LogIn = () => {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
+            <p>
+              Forget Password?
+              <small className="btn btn-link text-warning ">
+                Reset Password
+              </small>
+            </p>
+
+            <Button className="btn  btn-primary px-4" type="submit">
+              Log In
             </Button>
           </Form>
           <div className="">
@@ -58,7 +62,7 @@ const LogIn = () => {
           </div>
           <br />
           <p>
-            Don't have an account? <Link to="#">Create an account</Link>
+            Don't have an account? <Link to="/signup">Create an account</Link>
           </p>
         </div>
       </div>

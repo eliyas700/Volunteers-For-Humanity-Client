@@ -30,8 +30,8 @@ const Header = () => {
               <Nav.Link as={Link} to="/register">
                 <button className="register-btn ">Register</button>
               </Nav.Link>
-              <Nav.Link as={Link} to="/login">
-                <button className="admin-btn">Log In</button>
+              <Nav.Link as={Link} to="/signup">
+                <button className="admin-btn">Sign Up</button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
