@@ -6,10 +6,12 @@ import Home from "./Pages/Homepage/Home";
 import Register from "./Pages/Authorization/Register/Register";
 import LogIn from "./Pages/Authorization/LogIn/LogIn";
 import Signup from "./Pages/Authorization/SignUp/Signup";
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <div className="App">
       <Header></Header>
+      <Toaster></Toaster>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>

@@ -1,11 +1,43 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
 import PageTitle from "../../Shared/PageTitle";
 import SocialSignIn from "../SociaSignIn/SocialSignIn";
 
 const Signup = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
+  const navigate = useNavigate();
   const [checked, setChecked] = useState(false);
+  const [errorMsg, setError] = useState("");
+  if (user) {
+    navigate("/");
+  }
+  const handleCreateUser = (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const confirmPass = event.target.confirmPassword.value;
+    if (password.length < 6) {
+      return setError("Password Must have at least 6 Characters");
+    }
+    if (password === confirmPass) {
+      createUserWithEmailAndPassword(email, password);
+      updateProfile({ displayName: name });
+      toast("Creating Account");
+      event.target.reset();
+    } else {
+      setError("Sorry Password Did'nt Match");
+    }
+  };
   return (
     <div>
       <div className=" container bg-white w-50 mt-3 pt-3 pb-5">
@@ -24,10 +56,7 @@ const Signup = () => {
           </div>
         </div>
         <h4 className="text-primary my-3 text-center">Create an Account</h4>
-        <Form
-          //   onSubmit={handleFormSubmit}
-          className="w-75 mx-auto text-start"
-        >
+        <Form onSubmit={handleCreateUser} className="w-75 mx-auto text-start">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Your Name</Form.Label>
             <Form.Control
@@ -93,7 +122,7 @@ const Signup = () => {
               />
             </Form.Group>
           </Form.Group>
-          {/* <p className="text-danger">{errorMessage}</p> */}
+          <p className="text-danger">{errorMsg}</p>
           <Button variant="primary" disabled={!checked} type="submit">
             Register Now
           </Button>
