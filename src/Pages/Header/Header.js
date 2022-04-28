@@ -1,9 +1,13 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 import PageTitle from "../Shared/PageTitle";
 import "./Header.css";
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
+  console.log(user);
   return (
     <>
       <PageTitle title="Home"></PageTitle>
@@ -30,9 +34,15 @@ const Header = () => {
               <Nav.Link as={Link} to="/register">
                 <button className="register-btn ">Register</button>
               </Nav.Link>
-              <Nav.Link as={Link} to="/signup">
-                <button className="admin-btn">Sign Up</button>
-              </Nav.Link>
+              {user ? (
+                <Nav className="d-flex align-items-center">
+                  <span>{user.displayName || user?.email}</span>
+                </Nav>
+              ) : (
+                <Nav.Link as={Link} to="/signup">
+                  <button className="admin-btn">Sign Up</button>
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
