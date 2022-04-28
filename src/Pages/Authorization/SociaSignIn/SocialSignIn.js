@@ -14,13 +14,14 @@ const SocialSignIn = () => {
           className="bg-primary"
         ></div>
       </div>
-      <div className="social-icons">
+      <div className="social-icons w-75 ">
         {/* <p className="text-danger">{errorElement}</p> */}
         <button
           style={{ outline: "none" }}
-          className="w-75 mb-3 py-2 rounded-pill border-primary"
+          className="w-75  mb-3 py-2 rounded-pill border-primary"
         >
-          <img height={30} src="https://i.ibb.co/wcDHzs7/google.png" alt="" />{" "}
+          <img height={30} src="https://i.ibb.co/wcDHzs7/google.png" alt="" />
+          <span className="text-black ms-2">Continue With Google</span>
         </button>
         <button
           style={{ background: "#384F81" }}
@@ -33,7 +34,8 @@ const SocialSignIn = () => {
           style={{ outline: "none" }}
           className="w-75 py-2 rounded-pill border-secondary"
         >
-          <img height={30} src="https://i.ibb.co/zbXRRqj/github.png" alt="" />{" "}
+          <img height={30} src="https://i.ibb.co/zbXRRqj/github.png" alt="" />
+          <span className="text-black ms-2">Continue With GitHub</span>
         </button>
       </div>
     </div>

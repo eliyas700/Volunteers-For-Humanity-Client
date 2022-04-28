@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PageTitle from "../../Shared/PageTitle";
+import SocialSignIn from "../SociaSignIn/SocialSignIn";
 
 const Signup = () => {
   const [checked, setChecked] = useState(false);
@@ -103,7 +104,9 @@ const Signup = () => {
             Log In
           </Link>
         </p>
-        <div></div>
+        <div>
+          <SocialSignIn></SocialSignIn>
+        </div>
       </div>
     </div>
   );

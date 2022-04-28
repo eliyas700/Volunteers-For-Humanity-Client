@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PageTitle from "../../Shared/PageTitle";
+import SocialSignIn from "../SociaSignIn/SocialSignIn";
 
 const LogIn = () => {
   return (
@@ -48,22 +49,14 @@ const LogIn = () => {
             <Button className="btn  btn-primary px-4" type="submit">
               Log In
             </Button>
+            <br />
+            <p className="mt-4">
+              Don't have an account? <Link to="/signup">Create an account</Link>
+            </p>
           </Form>
-          <div className="">
-            <button className="login-button ">
-              <img
-                className="google-button"
-                src="https://www.freepngimg.com/thumb/google/66903-google-pay-gboard-platform-logo-cloud.png"
-                height="30"
-                alt=""
-              />
-              Continue with Google
-            </button>
+          <div className="w-100 my-3">
+            <SocialSignIn></SocialSignIn>
           </div>
-          <br />
-          <p>
-            Don't have an account? <Link to="/signup">Create an account</Link>
-          </p>
         </div>
       </div>
     </div>
